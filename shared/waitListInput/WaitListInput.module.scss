@@ -49,6 +49,11 @@
   width: 50rem;
 
   @include screenMax('mobile') {
-    width: 60%;
+    width: 65%;
+    input {
+      &::placeholder {
+        font-size: 1.6rem;
+      }
+    }
   }
 }
