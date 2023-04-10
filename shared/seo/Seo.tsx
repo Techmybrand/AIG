@@ -24,7 +24,7 @@ const Seo = ({
       <meta name="og:title" property="og:title" content={title} />
       <meta name="og:description" property="og:description" content={description} />
       <meta property="og:image" content={icon} />
-      <meta property="og:site_name" content="On Ramp" />
+      <meta property="og:site_name" content="AIG Token" />
       <meta property="og:url" content="" />
       <meta name="twitter:card" content="summary_large_image"></meta>
       <meta name="keywords" content={keywords}></meta>
