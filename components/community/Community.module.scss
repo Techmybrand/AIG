@@ -51,8 +51,6 @@
             color: $col-blue-50;
             text-transform: capitalize;
           }
-          p {
-          }
         }
         .row {
           @include flex(flex-start, center);

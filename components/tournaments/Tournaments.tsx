@@ -56,7 +56,7 @@ const Card = ({ playerAvatar, type, name, title, level, progress }: Props) => {
   return (
     <div className={styles.card} data-animation="resume-card" data-type={type}>
       <figure className={styles.avatar}>
-        <Image src={playerAvatar} layout="fill" alt="player" />
+        <Image src={playerAvatar} layout="fill" alt="player" quality={100} priority />
       </figure>
       <div className={styles.card_container}>
         {/* <Image src="/svgs/background.svg" layout="fill" alt="" /> */}
