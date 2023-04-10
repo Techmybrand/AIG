@@ -1,0 +1,19 @@
+@import '@/styles/imports';
+
+.layout {
+  height: 100%;
+  width: 100%;
+  background-color: $col-primary;
+  overflow: hidden;
+}
+.layout_content {
+  padding: 0 20rem;
+  flex-grow: 1;
+  color: $primary-text-color;
+  @include screenMax('tablet') {
+    padding: 0 10rem;
+  }
+  @include screenMax('mobile') {
+    padding: 0 3rem;
+  }
+}

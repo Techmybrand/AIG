@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Vinque';
+  src: url('../../public/fonts/vinque.otf') format('otf');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+section,
+article,
+blockquote,
+div,
+span,
+nav,
+p,
+ul,
+li,
+a {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: #a5acaf;
+}

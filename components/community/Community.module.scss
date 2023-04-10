@@ -1,0 +1,107 @@
+@import '@/styles/_imports';
+
+.section {
+  @include flex(space-between);
+  position: relative;
+  .title_container {
+    width: 44rem;
+    .description {
+      p,
+      a {
+        @extend %text-18;
+        font-weight: 500;
+        margin-top: 1.6rem;
+      }
+      a {
+        color: #26c6da;
+        text-decoration: underline;
+      }
+    }
+    @include screenMax('mobile') {
+      width: 100%;
+    }
+  }
+  .container {
+    width: 55rem;
+    .card {
+      width: 100%;
+      @include flex();
+      flex-wrap: nowrap;
+      &:not(:last-child) {
+        margin-bottom: 4.8rem;
+      }
+      .icon {
+        position: relative;
+        width: 3.2rem;
+        height: 3.2rem;
+        margin-right: 2rem;
+        flex-shrink: 0;
+      }
+      .external_icon {
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        margin-left: 0.8rem;
+      }
+      .block {
+        display: block;
+        .text {
+          h3 {
+            @extend %text-20;
+            color: $col-blue-50;
+            text-transform: capitalize;
+          }
+          p {
+          }
+        }
+        .row {
+          @include flex(flex-start, center);
+          margin-bottom: 0.8rem;
+        }
+      }
+    }
+    @include screenMax('mobile') {
+      width: 100%;
+      margin-top: 5rem;
+    }
+  }
+  .top_right_container,
+  .top_left_container,
+  .bottom_left_container,
+  .bottom_right_container {
+    position: absolute;
+    top: 4.8rem;
+    .top_right,
+    .top_left,
+    .bottom_left,
+    .bottom_right {
+      position: relative;
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+  .top_right_container {
+    right: -1.4rem;
+  }
+  .top_left_container {
+    left: -1.4rem;
+    .top_left {
+      rotate: -90deg;
+    }
+  }
+  .bottom_left_container,
+  .bottom_right_container {
+    bottom: 4.8rem;
+    top: unset;
+    .bottom_left {
+      left: -1.4rem;
+      rotate: 180deg;
+    }
+    .bottom_right {
+      rotate: 90deg;
+    }
+  }
+  .bottom_right_container {
+    right: -1.4rem;
+  }
+}

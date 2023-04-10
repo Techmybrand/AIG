@@ -1,0 +1,56 @@
+@import '@/styles/_imports';
+
+.section {
+  .title {
+    margin-bottom: 4.8rem;
+  }
+  .container {
+    @include flex(space-between, flex-start, wrap);
+    .card {
+      width: 25rem;
+      height: 30rem;
+      margin-bottom: 3.2rem;
+      position: relative;
+      flex-shrink: 0;
+      .details {
+        background-color: #060606;
+        border: 1px solid #181a1d;
+        height: 100%;
+        width: 100%;
+        @include flex(flex-end, flex-start, column);
+        .details_block {
+          padding: 2.4rem;
+          h3 {
+            @extend %text-20;
+            color: #26c6da;
+            margin-bottom: 0.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+          h4 {
+            @extend %text-16;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #3b3f49;
+          }
+          .socials {
+            margin-top: 1.5rem;
+            @include flex();
+            .socials_icon {
+              position: relative;
+              width: 2.8rem;
+              height: 2.8rem;
+              margin-right: 2rem;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      @include screenMax('mobile') {
+        width: 48%;
+        height: 35rem;
+        flex-shrink: 0;
+      }
+    }
+  }
+}

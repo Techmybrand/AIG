@@ -1,0 +1,79 @@
+@import '@/styles/imports';
+
+.footer {
+  padding: 0 20rem 11rem;
+  .block {
+    max-width: 39rem;
+  }
+  .text {
+    h3 {
+      @extend %text-20;
+      color: $col-blue-50;
+      margin-bottom: 1.6rem;
+      font-weight: 700;
+    }
+    p {
+      margin-top: 1.6rem;
+      color: $col-white;
+      @extend %text-16;
+    }
+  }
+  .nav_section {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    .nav_item {
+      @extend %text-18;
+      text-transform: capitalize;
+      font-weight: 400;
+      transition: all 0.2s ease-out;
+      position: relative;
+      cursor: pointer;
+      margin-bottom: 1.6rem;
+    }
+  }
+  .nav_block {
+    &:not(:last-child) {
+      margin-right: 7.2rem;
+    }
+  }
+  .row {
+    @include flex(space-between);
+  }
+  .small_row {
+    @include flex();
+  }
+  .footer_footer {
+    width: 100%;
+    @extend %center;
+    margin-top: 8.4rem;
+    .footer_socials {
+      @include flex();
+      margin-bottom: 2.4rem;
+      .footer_social {
+        position: relative;
+        width: 3.2rem;
+        height: 3.2rem;
+        &:not(:last-child) {
+          margin-right: 3rem;
+        }
+      }
+    }
+  }
+  @include screenMax('mobile') {
+    padding: 0 5rem 11rem;
+    .small_row {
+      flex-direction: column;
+    }
+    .block {
+      margin-bottom: 3rem;
+      max-width: 100%;
+      .logo {
+        margin-bottom: 3rem;
+      }
+    }
+    .footer_footer {
+      margin-top: 4rem;
+    }
+  }
+}

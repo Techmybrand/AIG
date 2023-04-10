@@ -1,0 +1,30 @@
+@import '@/styles/_imports';
+
+.container {
+  @include flex(flex-start, center, column);
+  margin-bottom: 7.8rem;
+  .text {
+    h3 {
+      @extend %text-18;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+  .row,
+  .small_row {
+    @include flex(space-between, center);
+    max-width: 61.6rem;
+    @include screenMax('mobile') {
+      max-width: 100%;
+    }
+  }
+  .small_row {
+    justify-content: center;
+  }
+  .icon {
+    position: relative;
+    width: 18.4rem;
+    height: 4rem;
+    margin: 1.6rem 0;
+  }
+}

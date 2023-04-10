@@ -1,0 +1,67 @@
+%btn {
+  transition: all 0.2s ease-out;
+  outline: none;
+  cursor: pointer;
+  @extend %text-18;
+  font-weight: 700;
+  font-family: $font-space;
+  background-color: $col-white;
+  padding: 1.4rem 3.6rem;
+  position: relative;
+  border: none;
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0.2rem;
+    height: 100%;
+    top: 0;
+    background-color: $col-white;
+  }
+  &::after {
+    right: -0.6rem;
+  }
+  &::before {
+    left: -0.6rem;
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  @include screenMax('tablet') {
+    padding: 1.4rem 2.6rem;
+  }
+
+  // @include flex(center, center);
+  // column-gap: 6px;
+
+  // @include flex(center, center, row nowrap);
+}
+
+%btn-primary {
+  @extend %btn;
+
+  min-width: 5rem;
+  min-height: 3rem;
+  // box-shadow: 0.3rem 0.3rem $col-grey-40;
+  &:active {
+    transition: $all-transition;
+  }
+  &:hover {
+    transform: scale(1.02);
+    transition: $all-transition;
+  }
+  color: $col-primary;
+}
+
+%btn-transparent {
+  @extend %btn;
+  background-color: transparent;
+  border-color: transparent;
+  color: $col-white;
+  transition: $all-transition;
+  &:hover {
+    border-color: #373737;
+    transition: $all-transition;
+  }
+}

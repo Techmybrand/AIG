@@ -1,0 +1,85 @@
+#nprogress {
+  .bar {
+    background-color: #110041 !important;
+    height: 0.4rem !important;
+  }
+
+  .peg {
+    box-shadow: none !important;
+  }
+}
+
+.active-nav {
+  a {
+    color: $col-white !important;
+    &::after {
+      display: block !important;
+    }
+  }
+}
+
+section {
+  padding: 11rem 0 !important;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+
+.card-front-enter {
+  transform: rotateY(180deg);
+}
+
+.card-front-enter-active {
+  transform: rotateY(0deg);
+  transition: transform 300ms ease-in;
+}
+
+.card-front-exit {
+  transform: rotateY(0deg);
+}
+
+.card-front-exit-active {
+  transform: rotateY(180deg);
+  transition: transform 300ms ease-in;
+}
+
+.card-back-enter {
+  transform: rotateY(0deg);
+  div {
+    opacity: 0.3;
+  }
+}
+
+.card-back-enter-active {
+  transform: rotateY(180deg);
+  transition: transform 300ms ease-in;
+}
+
+.card-back-exit {
+  transform: rotateY(180deg);
+  div {
+    opacity: 0.3;
+  }
+}
+
+.card-back-exit-active {
+  transform: rotateY(0deg);
+  transition: transform 300ms ease-in;
+}

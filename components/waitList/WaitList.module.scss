@@ -1,0 +1,28 @@
+@import '@/styles/_imports';
+
+.section {
+  @include flex(center, center, column);
+  .title {
+    text-align: center;
+    margin-bottom: 2.4rem;
+  }
+  .text {
+    margin-top: 1.6rem;
+    p,
+    a {
+      @extend %text-18;
+      text-align: center;
+      font-weight: 500;
+      color: $col-white;
+    }
+    a {
+      color: $col-blue-50;
+      text-decoration: underline;
+    }
+  }
+  .row {
+    @include flex(space-between);
+    width: 100%;
+    margin-top: 9.6rem;
+  }
+}

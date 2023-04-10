@@ -1,0 +1,33 @@
+@import '@/styles/_imports';
+
+.container {
+  @include flex(space-between);
+  .block {
+    max-width: 53rem;
+    .title {
+      margin-bottom: 3.2rem;
+    }
+  }
+  .icon {
+    position: relative;
+    width: 46.6rem;
+    height: 32.5rem;
+    @include screenMax('mobile') {
+      width: 100%;
+    }
+  }
+  @include screenMax('mobile') {
+    @include flex(center, center, column);
+    .block {
+      max-width: 100%;
+      margin-bottom: 10rem;
+      @include flex(center, center, column);
+      .title {
+        text-align: center;
+        div:first-child {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

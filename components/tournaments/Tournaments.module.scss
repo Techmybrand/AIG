@@ -1,0 +1,197 @@
+@import '@/styles/_imports';
+
+.section {
+  @include flex(center, center, column);
+  .container {
+    max-width: 87rem;
+    .title {
+      @include flex(center, center, column);
+      text-align: center;
+    }
+    p {
+      @extend %text-20;
+      text-align: center;
+      font-weight: 500;
+      margin-top: 1.6rem;
+      //   max-width: 79.2rem;
+    }
+    margin-bottom: 3.2rem;
+  }
+  .row {
+    @include flex(space-between);
+    width: 100%;
+    margin-top: 9.6rem;
+  }
+}
+
+.card {
+  width: 52.2rem;
+  padding: 1.7rem;
+  font-family: $font-vinque;
+  background: linear-gradient(
+      178.91deg,
+      #191718 0.2%,
+      #161415 14.46%,
+      #151515 25.22%,
+      #131313 33.38%,
+      #111111 48%,
+      #0e0e0e 66.51%,
+      #0e0e0e 98.39%
+    ),
+    linear-gradient(180deg, #171415 0%, #151415 10.52%, #131313 23.21%, #101010 46.27%, #0c0c0c 100%);
+  .avatar {
+    position: relative;
+    width: 100%;
+    height: 45.4rem;
+  }
+
+  .card_container {
+    background-image: url('../../public/svgs/background.svg');
+    // width: 50.8rem;
+    width: 100%;
+    height: 14rem;
+    padding: 2.3rem 2rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    object-fit: contain;
+    @include screenMax('mobile') {
+      padding: 2.3rem 3rem;
+    }
+  }
+
+  .bio {
+    // padding: 2.25rem 0;
+    @include flex(flex-start, center, row, 1.2rem);
+
+    .bioicon {
+      position: relative;
+      width: 5.2rem;
+      height: 5.8rem;
+    }
+    .biodetails {
+      @include flex(center, flex-start, column);
+      font-family: $font-vinque;
+      text-transform: capitalize;
+      span:nth-child(1) {
+        @extend %text-22;
+        color: #52555b;
+      }
+
+      span:nth-child(2) {
+        color: #3b3f49;
+        @extend %text-14;
+      }
+    }
+    .small_row {
+      @include flex(flex-start, center);
+      margin-left: auto;
+      .biolevel {
+        position: relative;
+        margin-left: 0.5rem;
+        width: 4.2rem;
+        height: 4.2rem;
+        transform: rotate(45deg);
+        //   background-color: $col-black-70;
+
+        @include flex(center, center);
+
+        span {
+          @extend %text-10;
+          color: #52555b;
+          transform: rotate(-45deg);
+        }
+      }
+      p {
+        @extend %text-14;
+        text-transform: capitalize;
+        background: linear-gradient(180deg, #c09645 7.5%, #ffc977 53.75%, #c09645 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    }
+  }
+
+  .stats {
+    @include flex(flex-start, flex-start, column, 0, 1.536rem);
+
+    @include screenMax('mobile') {
+      @include flex(flex-start, flex-start, column, 0, 0.973rem);
+    }
+    .progress {
+      width: 100%;
+      @include flex(flex-start, flex-start, column, 0, 1.1rem);
+
+      @include screenMax('mobile') {
+        @include flex(flex-start, flex-start, column, 0, 0.697rem);
+      }
+    }
+    .progress_row {
+      @include flex(space-between, center);
+      width: 100%;
+    }
+    .progresslabel {
+      @extend %text-16;
+      font-weight: 600;
+      color: #3b3f49;
+
+      span {
+        font: inherit;
+        background: linear-gradient(180deg, #c09645 7.5%, #ffc977 53.75%, #c09645 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    }
+
+    .progresswrap {
+      width: 100%;
+      padding: 0.15rem;
+      border: 1px solid #1d1e1f;
+    }
+
+    .progressbar {
+      border-radius: 0;
+      background-color: #171719 !important;
+
+      & > div {
+        height: 1rem;
+        transition: none;
+      }
+    }
+  }
+  &[data-type='bronze'] {
+    .bio {
+      .small_row {
+        p {
+          background: linear-gradient(180deg, #e3714b -7.89%, #6b1f10 91.22%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+      }
+    }
+    .stats {
+      .progresslabel {
+        span {
+          background: linear-gradient(180deg, #e3714b -7.89%, #6b1f10 91.22%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+      }
+    }
+  }
+  @include screenMax('mobile') {
+    width: 100%;
+    flex-shrink: 0;
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+    .avatar {
+      width: 100%;
+      height: 55rem;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@import '@/styles/imports';
+
+.input {
+  width: 100%;
+  row-gap: 0.7rem;
+  // height: 100%;
+  @include flex(flex-start, flex-start, column);
+}
+
+.input_label {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  color: $primary-text-color;
+  font-family: $font-space;
+  font-weight: 500;
+}
+
+.input_wrapper {
+  position: relative;
+  width: 100%;
+  height: 6.1rem;
+  padding: 1.8rem;
+  column-gap: 1rem;
+  // background-color: $col-secondary;
+  // border: 0.1rem solid $col-secondary;
+  border-radius: 0.4rem;
+  transition: all 0.1s ease-in;
+  @include flex(flex-start, center, row nowrap);
+  @include screenMax('ssm-mobile') {
+    height: 5rem;
+    padding: 1rem 1.8rem;
+  }
+}
+
+.input_icon {
+  position: relative;
+  width: 3.2rem;
+  height: 3.2rem;
+  flex-shrink: 0;
+  margin-right: 3rem;
+}
+
+.input_field {
+  all: unset;
+  flex-grow: 1;
+  height: 100%;
+  width: 100%;
+  @extend %text-20;
+  line-height: 2.2rem;
+  font-family: $font-space;
+  //   width: 12rem;
+  color: $primary-text-color;
+  &::placeholder {
+    @extend %text-20;
+    line-height: 2.2rem;
+    font-family: $font-space;
+    color: $primary-text-color;
+  }
+}
+
+.input_text {
+  p {
+    @extend %text-18;
+    line-height: 2.2rem;
+    color: $primary-text-color;
+  }
+  span {
+    @extend %text-18;
+    line-height: 2.2rem;
+    font-family: $font-space;
+    color: $col-blue-90;
+  }
+  //   @include flex(flex-start, center);
+}
+
+.icon {
+  position: relative;
+  width: 2.4rem;
+  height: 2.4rem;
+  cursor: pointer;
+}

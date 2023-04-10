@@ -1,0 +1,54 @@
+@import '@/styles/imports';
+
+.container {
+  position: relative;
+  width: 73.8rem;
+  form {
+    width: 100%;
+  }
+  @include screenMax('mobile') {
+    width: 100%;
+  }
+}
+
+.newsLetter_message {
+  position: absolute;
+  top: 110%;
+  p {
+    font-size: 1.2rem;
+  }
+}
+.newsLetter_error {
+  p {
+    color: #d8000c;
+  }
+}
+.newsLetter_success {
+  p {
+    color: $col-primary;
+  }
+}
+
+.inputContainer {
+  @include flex(space-between, center);
+  width: 100%;
+  background-color: #0f1016;
+  padding: 1.6rem 2.4rem;
+  //   @include screenMax('tablet') {
+  //     width: 30rem;
+  //   }
+  @include screenMax('mobile') {
+    width: 100%;
+  }
+}
+
+.input {
+  all: unset;
+  color: rgba(124, 137, 160, 1);
+  font-size: 1.4rem;
+  width: 50rem;
+
+  @include screenMax('mobile') {
+    width: 60%;
+  }
+}
