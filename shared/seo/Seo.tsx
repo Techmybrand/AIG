@@ -12,10 +12,10 @@ interface Props {
 }
 
 const Seo = ({
-  title = 'On Ramp',
-  description = 'On Ramp',
+  title = 'AIG Token',
+  description = 'AIG Token',
   icon = 'img/social-icon.png',
-  keywords = 'On Ramp',
+  keywords = 'AIG Token',
 }: Props) => {
   return (
     <Head>
