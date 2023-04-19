@@ -44,7 +44,7 @@ const Card = ({ member }: Props) => {
   return (
     <div className={styles.card} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <CSSTransition in={!isFlipped} timeout={300} classNames="card-front" unmountOnExit>
-        <Image src={member.icon} layout="fill" alt="" />
+        <Image src={member.icon} layout="fill" alt="" quality={100} />
       </CSSTransition>
       <CSSTransition in={isFlipped} timeout={300} classNames="card-back" unmountOnExit>
         <div className={styles.details}>
